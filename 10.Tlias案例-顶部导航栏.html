@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顶部导航栏</title>
+    <style>
+        /* 全局样式重置 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 顶部导航栏样式 */
+        .navbar {
+            display: flex; /*弹性布局*/
+            justify-content: space-between; /* 两端对齐 */
+            align-items: center;
+            background-color: grey; /* 背景颜色为灰色 */
+            padding: 10px 20px; /* 内边距 */
+        }
+
+        /* 标题样式 */
+        .navbar .title {
+            font-size: 24px; /* 加大字体 */
+            font-weight: bold; /* 加粗 */
+            color: white; /* 字体颜色为白色 */ 
+            /* 设置字体为楷体 */
+            font-family: KaiTi, serif;
+        }
+
+        /* 退出登录链接样式 */
+        .navbar .logout {
+            font-size: 16px;
+            color: white; /* 字体颜色为白色 */
+            text-decoration: none; /* 去掉下划线 */
+        }
+
+        /* 鼠标悬停时的链接效果 */
+        .navbar .logout:hover {
+            text-decoration: underline; /* 悬停时显示下划线 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="navbar">
+        <!-- 标题 -->
+        <h1 class="title">tlias智能学习辅助系统</h1>
+        <!-- 退出登录链接 -->
+        <a href="#" class="logout">退出登录</a>
+    </div>
+</body>
+</html>
