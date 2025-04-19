@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顶部导航栏</title>
+    <style>
+        /* 全局样式重置 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 顶部导航栏样式 */
+        .navbar {
+            display: flex; /*弹性布局*/
+            justify-content: space-between; /* 两端对齐 */
+            align-items: center;
+            background-color: grey; /* 背景颜色为灰色 */
+            padding: 10px 20px; /* 内边距 */
+        }
+
+        /* 标题样式 */
+        .navbar .title {
+            font-size: 24px; /* 加大字体 */
+            font-weight: bold; /* 加粗 */
+            color: white; /* 字体颜色为白色 */ 
+            /* 设置字体为楷体 */
+            font-family: KaiTi, serif;
+        }
+
+        /* 退出登录链接样式 */
+        .navbar .logout {
+            font-size: 16px;
+            color: white; /* 字体颜色为白色 */
+            text-decoration: none; /* 去掉下划线 */
+        }
+
+        /* 鼠标悬停时的链接效果 */
+        .navbar .logout:hover {
+            text-decoration: underline; /* 悬停时显示下划线 */
+        }
+        /* 搜索表单样式 */
+        .search-form {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9; /* 背景颜色 */
+            border-bottom: 1px solid #ddd; /* 底部边框 */
+            margin: 20px 0;
+        }
+
+        /* 表单项和按钮的容器 */
+        .form-group {
+            margin-right: 10px; /* 各控件之间的间距 */
+        }
+
+        /* 输入框和选择框样式 */
+        .form-group input[type="text"], .form-group select {
+            padding: 5px 10px;
+            font-size: 16px;
+            width: 400px; /* 设置宽度一致，美观整齐 */
+        }
+
+        /* 按钮样式 */
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            color: white;
+        }
+
+        /* 查询按钮背景颜色 */
+        .search-btn {
+            background-color: #007bff;
+        }
+
+        /* 清空按钮背景颜色 */
+        .clear-btn {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="navbar">
+        <!-- 标题 -->
+        <h1 class="title">tlias智能学习辅助系统</h1>
+        <!-- 退出登录链接 -->
+        <a href="#" class="logout">退出登录</a>
+    </div>
+
+    <!-- 搜索表单区域 -->
+    <form class="search-form" action="/save" method="post">
+    <!-- 姓名输入框 -->
+    <div class="form-group">
+        <input type="text" name="name" placeholder="姓名">
+    </div>
+
+    <!-- 性别选择框 -->
+    <div class="form-group">
+        <select name="gender">
+            <option value="" disabled selected>性别</option>
+            <option value="1">男</option>
+            <option value="2">女</option>
+        </select>
+    </div>
+
+    <!-- 职位选择框 -->
+    <div class="form-group">
+        <select name="job">
+            <option value="" disabled selected>职位</option>
+            <option value="1">班主任</option>
+            <option value="2">讲师</option>
+            <option value="3">学工主管</option>
+            <option value="4">教研主管</option>
+            <option value="5">咨询师</option>
+        </select>
+    </div>
+
+    <!-- 查询按钮 -->
+    <button type="submit" class="btn search-btn">查询</button>
+
+    <!-- 清空按钮 -->
+    <button type="button" class="btn clear-btn">清空</button>
+    </form>
+
+</body>
+</html>
